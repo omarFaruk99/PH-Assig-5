@@ -1,6 +1,12 @@
 // function-1:get or set the value of form elements such as <input>, <textarea>, and <select>.
 function inputValueField(id) {
-    const inputFiledValue = document.getElementById(id).value
+    const inputFiledValue = document.getElementById(id).value.trim();
+    // check valid donate-amount
+    const isValidDonateAmount = /^\d+(\.\d+)?$/.test(inputFiledValue) && parseFloat(inputFiledValue) > 0;
+    if (!isValidDonateAmount) {
+        alert("Enter valid Amount")
+        return null;
+    }
     const inputNumberValue = parseFloat(inputFiledValue);
     return inputNumberValue;
 }

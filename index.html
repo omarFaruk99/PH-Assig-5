@@ -35,7 +35,7 @@
             </div>
         </nav>
         <!-- btn-Features: Donation & History -->
-        <div class="flex justify-center gap-x-4 mt-16 pb-7">
+        <div class="flex justify-center gap-x-4 mt-12 pb-7">
             <button class="btn px-8 py-4">Donation</button>
             <button class="btn px-8 py-4">History</button>
         </div>
@@ -44,7 +44,7 @@
     <main class="px-3 lg:px-32 mb-6">
 
         <!-- cards container -->
-        <div class="card-container mt-9">
+        <div class="card-container mt-9 space-y-8">
             <!-- card:1 -->
             <div class="mx-auto bg-white rounded-2xl border-gray-100 border-2 overflow-hidden p-6">
                 <!-- Card Content -->
@@ -83,21 +83,20 @@
                         <input id="inputField-firstPlace" type="text" placeholder="Write Donation Amount"
                             class="border border-gray-300 rounded-lg p-2 w-full mb-4">
                         <!-- Donate Button -->
-                        <button
-                           id="btn-donate-firstPlace" class="bg-green-500 text-black font-semibold text-xl py-4 px-4 rounded-lg hover:bg-green-600">
+                        <button id="btn-donate-firstPlace"
+                            class="bg-green-500 text-black font-semibold text-xl py-4 px-4 rounded-lg hover:bg-green-600">
                             Donate Now
                         </button>
                     </div>
                 </div>
             </div>
-
             <!-- card:2 -->
             <div class="mx-auto bg-white rounded-2xl border-gray-100 border-2 overflow-hidden p-6">
                 <!-- Card Content -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <!-- Image Section -->
                     <div>
-                        <img src="./assets/noakhali.png" alt="Flood Relief" class="w-full h-auto rounded-lg">
+                        <img src="./assets/feni.png" alt="Flood Relief" class="w-full h-auto rounded-lg">
                     </div>
                     <!-- Text and Donation Section -->
                     <div class="flex flex-col justify-center">
@@ -109,27 +108,76 @@
                                     <img src="./assets/coin.png" alt="Coin Icon" class="w-5 h-5">
                                 </div>
                                 <div>
-                                    <span>500</span>
+                                    <span id="secondPlace-avail-Dona-balance">500</span>
                                     <span>BDT</span>
                                 </div>
                             </div>
                         </div>
                         <!-- Donation Title -->
                         <h2 class="text-3xl font-bold text-black mb-3">
-                            Donate for Flood at Noakhali, Bangladesh
+                            Donate for Flood Relief in Feni, Bangladesh
                         </h2>
                         <!-- Donation Description -->
                         <p class="text-gray-600 text-base mb-4">
-                            The recent floods in Noakhali have caused significant damage to homes and infrastructure.
-                            Your donation will help provide essential supplies to those affected by this disaster.
-                            Every contribution, big or small, makes a difference. Please join us in supporting the
-                            relief efforts.
+                            The recent floods in Feni have devastated local communities, leading to severe disruption
+                            and loss. Your generous donation will help provide immediate aid, including food, clean
+                            water, and medical supplies, to those affected by this calamity. Together, we can offer
+                            crucial support and help rebuild lives in the aftermath of this disaster. Every contribution
+                            counts towards making a real difference. Please consider donating today to assist those in
+                            urgent need.
                         </p>
                         <!-- Donation Input -->
-                        <input type="text" placeholder="Write Donation Amount"
+                        <input id="inputField-secondPlace" type="text" placeholder="Write Donation Amount"
                             class="border border-gray-300 rounded-lg p-2 w-full mb-4">
                         <!-- Donate Button -->
-                        <button
+                        <button id="btn-donate-secondPlace"
+                            class="bg-green-500 text-black font-semibold text-xl py-4 px-4 rounded-lg hover:bg-green-600">
+                            Donate Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- ...card:3.. -->
+            <div class="mx-auto bg-white rounded-2xl border-gray-100 border-2 overflow-hidden p-6">
+                <!-- Card Content -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Image Section -->
+                    <div>
+                        <img src="./assets/quota-protest.png" alt="Flood Relief" class="w-full h-auto rounded-lg">
+                    </div>
+                    <!-- Text and Donation Section -->
+                    <div class="flex flex-col justify-center">
+                        <!-- Donation Info -->
+                        <div class="mb-4">
+                            <div
+                                class="flex items-center space-x-2 text-gray-600 bg-gray-200 text-sm w-fit py-2 px-3 rounded-lg">
+                                <div>
+                                    <img src="./assets/coin.png" alt="Coin Icon" class="w-5 h-5">
+                                </div>
+                                <div>
+                                    <span id="thirdPlace-avail-Dona-balance">500</span>
+                                    <span>BDT</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Donation Title -->
+                        <h2 class="text-3xl font-bold text-black mb-3">
+                            Aid for Injured in the Quota Movement
+                        </h2>
+                        <!-- Donation Description -->
+                        <p class="text-gray-600 text-base mb-4">
+                            The recent Quota movement has resulted in numerous injuries and significant hardship for
+                            many individuals. Your support is crucial in providing medical assistance, rehabilitation,
+                            and necessary supplies to those affected. By contributing, you help ensure that injured
+                            individuals receive the care and support they need during this challenging time. Every
+                            donation plays a vital role in alleviating their suffering and aiding in their recovery.
+                            Please consider making a donation to support these brave individuals in their time of need.
+                        </p>
+                        <!-- Donation Input -->
+                        <input id="inputField-thirdPlace" type="text" placeholder="Write Donation Amount"
+                            class="border border-gray-300 rounded-lg p-2 w-full mb-4">
+                        <!-- Donate Button -->
+                        <button id="btn-donate-thirdPlace"
                             class="bg-green-500 text-black font-semibold text-xl py-4 px-4 rounded-lg hover:bg-green-600">
                             Donate Now
                         </button>
@@ -140,20 +188,8 @@
         </div>
     </main>
     <!-- ...........................JS Script................................ -->
-    <script>
-        // js to add/remove scroll-class
-        window.addEventListener("scroll", function () {
-            const header = document.getElementById("na-header");
-            // Check if the page has been scrolled more than 50px
-            if (window.scrollY > 50) {
-                header.classList.add('bg-white/95', 'backdrop-blur-md'); // Make background transparent and add blur effect
-                header.classList.remove('bg-white/90'); // Remove the less transparent background
-            } else {
-                header.classList.add('bg-white/90'); // Revert to original background
-                header.classList.remove('bg-white/95', 'backdrop-blur-md'); // Remove transparency and blur
-            }
-        })
-    </script>
+    <script src="./js/utility.js"></script>
+    <script src="./js/navbarTransparent.js"></script>
     <script src="./js/donate.js"></script>
 </body>
 

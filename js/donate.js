@@ -1,34 +1,44 @@
-// console.log("Donate is added to html")
+// First place 'Donate Now' addEventListener
 document.getElementById("btn-donate-firstPlace").addEventListener("click", function () {
-    // get the 1st place donation amount and store 'inputNumberFirstPlace' variable
-    const inputFiledFirstPlace = document.getElementById("inputField-firstPlace").value
-    const inputNumberFirstPlace = parseFloat(inputFiledFirstPlace);
-
-    // get the bank-Account available balance
-    const getBankAccountBalance = document.getElementById("bank-acc-balance").innerText
-    const numBankAccountBalance = parseFloat(getBankAccountBalance);
-    console.log("Bank account balance: ", numBankAccountBalance);
-
-    
-
-    // Check validation: "donate amount"
-    if (numBankAccountBalance >= 0 && inputNumberFirstPlace >= 0 && (numBankAccountBalance - inputNumberFirstPlace) >= 0) {
-        // subtract current donate amount from 'bank account balance'
-        const updatedBankAccountBalance = numBankAccountBalance - inputNumberFirstPlace;
-        document.getElementById("bank-acc-balance").innerText = updatedBankAccountBalance.toFixed(2);
+    // call function & get the 1st place donation amount and store 'inputNumberFirstPlace' variable
+    const inputNumberFirstPlace = inputValueField("inputField-firstPlace");
 
 
-        // get already donated amount at 1st place
-        const firstPlaceAvalableBalance = document.getElementById("firstPlace-avail-Dona-balance").innerText;
-        const firstPlaceAvalableBalNum = parseFloat(firstPlaceAvalableBalance)
-        console.log(firstPlaceAvalableBalNum, "inside validation");
+    // call the function & get the bank-Account available balance
+    const numBankAccountBalance = inputTextField("bank-acc-balance");
+
+    // Call function and validate 'donate-amount' && 'bank-account-balance'"
+    validateDonateAndBankAccount(numBankAccountBalance, inputNumberFirstPlace, "firstPlace-avail-Dona-balance");
+
+})
 
 
-        // add present donate amount + available amount and keep '
-        const newAvailableBalance = inputNumberFirstPlace + firstPlaceAvalableBalNum;
-        document.getElementById("firstPlace-avail-Dona-balance").innerText = newAvailableBalance;
-    } else {
-        alert("Insufficient Account Balance!");
-    }
+// Second place 'Donate Now' addEventListener
+document.getElementById("btn-donate-secondPlace").addEventListener("click", function () {
+    // call function & get the 2nd place donation amount and store 'inputNumberFirstPlace' variable
+    const inputNumberFirstPlace = inputValueField("inputField-secondPlace");
+
+
+    // call the function & get the bank-Account available balance
+    const numBankAccountBalance = inputTextField("bank-acc-balance");
+
+    // Call function and validate 'donate-amount' && 'bank-account-balance'"
+    validateDonateAndBankAccount(numBankAccountBalance, inputNumberFirstPlace, "secondPlace-avail-Dona-balance");
+
+})
+
+
+
+// Third place 'Donate Now' addEventListener
+document.getElementById("btn-donate-thirdPlace").addEventListener("click", function () {
+    // call function & get the 3rd place donation amount and store 'inputNumberFirstPlace' variable
+    const inputNumberFirstPlace = inputValueField("inputField-thirdPlace");
+
+
+    // call the function & get the bank-Account available balance
+    const numBankAccountBalance = inputTextField("bank-acc-balance");
+
+    // Call function and validate 'donate-amount' && 'bank-account-balance'"
+    validateDonateAndBankAccount(numBankAccountBalance, inputNumberFirstPlace, "thirdPlace-avail-Dona-balance");
 
 })

@@ -48,7 +48,7 @@ function validateDonateAndBankAccount(bankBalance, donateAmount, id, place) {
         p.style.borderRadius = "12px"; // Rounded corners
         p.style.padding = "15px"; // Padding inside the box
         p.style.marginBottom = "10px"; // Space between elements
-        p.style.width = "50%"; // Adjust width as needed
+        p.style.width = "90%"; // Adjust width as needed
 
         // Create a span for the main message with bold and large text
         const mainMessage = document.createElement('span');

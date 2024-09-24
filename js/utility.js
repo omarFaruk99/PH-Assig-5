@@ -37,6 +37,7 @@ function validateDonateAndBankAccount(bankBalance, donateAmount, id) {
         document.getElementById(id).innerText = newAvailableBalance;
     } else {
         alert("Insufficient Account Balance!");
+        document.getElementById("successModal").classList.add('hidden');
     }
 }
 

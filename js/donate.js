@@ -12,7 +12,7 @@ document.getElementById("btn-donate-firstPlace").addEventListener("click", funct
     const numBankAccountBalance = inputTextField("bank-acc-balance");
 
     // Call function and validate 'donate-amount' && 'bank-account-balance'"
-    validateDonateAndBankAccount(numBankAccountBalance, inputNumberFirstPlace, "firstPlace-avail-Dona-balance");
+    validateDonateAndBankAccount(numBankAccountBalance, inputNumberFirstPlace, "firstPlace-avail-Dona-balance", 'Noakhali');
 
 })
 
@@ -31,7 +31,7 @@ document.getElementById("btn-donate-secondPlace").addEventListener("click", func
     const numBankAccountBalance = inputTextField("bank-acc-balance");
 
     // Call function and validate 'donate-amount' && 'bank-account-balance'"
-    validateDonateAndBankAccount(numBankAccountBalance, inputNumberSecondPlace, "secondPlace-avail-Dona-balance");
+    validateDonateAndBankAccount(numBankAccountBalance, inputNumberSecondPlace, "secondPlace-avail-Dona-balance",'Feni');
 
 })
 
@@ -51,6 +51,6 @@ document.getElementById("btn-donate-thirdPlace").addEventListener("click", funct
     const numBankAccountBalance = inputTextField("bank-acc-balance");
 
     // Call function and validate 'donate-amount' && 'bank-account-balance'"
-    validateDonateAndBankAccount(numBankAccountBalance, inputNumberThirdPlace, "thirdPlace-avail-Dona-balance");
+    validateDonateAndBankAccount(numBankAccountBalance, inputNumberThirdPlace, "thirdPlace-avail-Dona-balance", 'Quota Movement');
 
 })

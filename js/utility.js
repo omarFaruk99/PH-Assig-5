@@ -38,7 +38,7 @@ function validateDonateAndBankAccount(bankBalance, donateAmount, id, place) {
 
        
 
-        // <=...............................................................=>
+        // <=.......................................................................................=>
 
         // Insert data into transaction history section
         const p = document.createElement('p');

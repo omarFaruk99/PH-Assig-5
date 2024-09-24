@@ -12,14 +12,14 @@
 
 </head>
 
-<body>
+<body class="min-h-screen flex flex-col">
     <!-- ................headr-section.............. -->
     <header class="mb-10">
         <!-- navbar -->
-        <nav class="flex justify-between items-center py-6 px-3 space-x-1 lg:px-32 bg-stone-100">
+        <nav class="flex justify-between items-center py-6 px-3 space-x-1 lg:px-32 bg-orange-50">
             <!-- home button -->
             <a href="./index.html">
-                <button class="btn btn-success text-xl px-6">Home</button>
+                <button class="btn btn-success text-xl px-6  bg-lime-400 hover:bg-lime-500 border-none text-black">Home</button>
             </a>
             <!-- Donate text with logo -->
             <div
@@ -36,12 +36,12 @@
         </nav>
     </header>
     <!-- ................main section............... -->
-    <main class="px-3 lg:px-32 mb-6">
+    <main class="px-3 lg:px-32 mb-6 flex-grow">
         <div class="flex">
             <h1 class="text-3xl font-extrabold mb-9">Important FAQ</h1>
             <i class="fa-regular fa-circle-question fa-2x ml-2"></i>
         </div>
-        <!-- using Accordion -->
+        <!-- using daisy UI: Accordion -->
         <div class="join join-vertical w-full">
             <div class="collapse collapse-arrow join-item border-base-300 border">
                 <input type="radio" name="my-accordion-4" checked="checked" />
@@ -84,6 +84,8 @@
         </div>
 
     </main>
+    <!-- footer section -->
+    <footer class="h-24 bg-orange-50 mt-16"></footer>
 </body>
 
 </html>

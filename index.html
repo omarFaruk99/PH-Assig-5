@@ -36,15 +36,15 @@
         </nav>
         <!-- btn-Features: Donation & History -->
         <div class="flex justify-center gap-x-4 mt-12 pb-7">
-            <button class="btn px-8 py-4">Donation</button>
-            <button class="btn px-8 py-4">History</button>
+            <button id="donation-feature-btn" class="btn px-8 py-4 bg-blue-500 text-white">Donation</button>
+            <button id="trans-his-feature-btn" class="btn px-8 py-4">History</button>
         </div>
     </header>
     <!-- ................main section............... -->
     <main class="px-3 lg:px-32 mb-6">
 
         <!-- cards container -->
-        <div class="card-container mt-9 space-y-8">
+        <div id="cards-container" class="card-container mt-9 space-y-8">
             <!-- card:1 -->
             <div class="mx-auto bg-white rounded-2xl border-gray-100 border-2 overflow-hidden p-6">
                 <!-- Card Content -->
@@ -210,12 +210,17 @@
                 </div>
             </div>
         </div>
+        <!-- ...............Transaction History............................... -->
+         <div id="trans-history" class="mt-5 mb-10 hidden">
+            <h1 class="font-extrabold text-8xl text-center">Transaction History</h1>
+         </div>
     </main>
     <!-- ...........................JS Script................................ -->
     <script src="./js/utility.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/navbarTransparent.js"></script>
     <script src="./js/donate.js"></script>
+    <script src="./js/featuresBtn.js"></script>
 </body>
 
 </html>

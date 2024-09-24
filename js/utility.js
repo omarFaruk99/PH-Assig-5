@@ -43,3 +43,16 @@ function validateDonateAndBankAccount(bankBalance, donateAmount, id) {
 
 
 
+// function-4: show section by Id when feature button clicked
+function showSectionById(id){
+    // at first hidden all featurs button section
+    document.getElementById('cards-container').classList.add('hidden');
+    document.getElementById('trans-history').classList.add('hidden');
+
+    // now unhide clicked features-btn
+    document.getElementById(id).classList.remove('hidden');
+
+}
+
+
+
